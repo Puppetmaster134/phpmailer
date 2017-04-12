@@ -1,3 +1,6 @@
+Live:
+http://phpmailer-env.us-west-2.elasticbeanstalk.com/login.php
+
 Project Requirements
 
 1. Setup an AWS account ✔
