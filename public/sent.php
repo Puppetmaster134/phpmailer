@@ -11,6 +11,13 @@ if(!isset($_SESSION['logged_in']))
 <head>
   <title>PHP Mailer - Emails</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    .row
+    {
+      margin-top:5px;
+      margin-bottom:5px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -30,7 +37,7 @@ if(!isset($_SESSION['logged_in']))
     ?>
     <div class="row">
       <div class="col-lg-2 offset-lg-5">
-        <a href="./index.php"><button>Back to Mailer</button></a>
+        <a class="btn btn-primary" href="./index.php">Back to Mailer</a>
       </div>
     </div>
   </div>

@@ -12,6 +12,10 @@ class ComposerStaticInit8ca8cba8e9102b55c8fb3396e70d0e30
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twilio\\' => 7,
+        ),
         'S' => 
         array (
             'SendGrid\\' => 9,
@@ -23,6 +27,10 @@ class ComposerStaticInit8ca8cba8e9102b55c8fb3396e70d0e30
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twilio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twilio/sdk/Twilio',
+        ),
         'SendGrid\\' => 
         array (
             0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
