@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 if(!isset($_SESSION['logged_in']))
 {
   header('Location: ./login.php');
@@ -52,7 +55,7 @@ if(isset($_POST['send']))
           <div class="card-block">
             <h4 class="card-title" style="text-align:center">Control Panel</h4>
             <div class="row">
-              <a class="btn btn-primary col-md-3 offset-md-2" href="./../scripts/logout.php">Logout</a>
+              <a class="btn btn-primary col-md-3 offset-md-2" href="./logout.php">Logout</a>
               <a class="btn btn-primary col-md-3 offset-md-2" href="./sent.php">View Emails</a>
             </div>
           </div>

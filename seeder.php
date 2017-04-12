@@ -3,10 +3,10 @@ require('vendor/autoload.php');
 
 function getPDO()
 {
-  $hostname = getenv('DB_HOST');
-  $db_name = getenv('DB_NAME');
-  $username = getenv('DB_USER');
-  $password = getenv('DB_PASS');
+  $hostname = $_SERVER['RDS_HOSTNAME'] ?? getenv('DB_HOST');
+  $db_name = $_SERVER['RDS_DB_NAME'] ?? getenv('DB_NAME');
+  $username = $_SERVER['RDS_USERNAME'] ?? getenv('DB_USER');
+  $password = $_SERVER['RDS_PASSWORD'] ?? getenv('DB_PASS');
   $dsn = "mysql:host=$hostname;dbname=$db_name";
   $opt = [
   PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,

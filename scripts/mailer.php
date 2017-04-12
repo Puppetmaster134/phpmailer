@@ -14,7 +14,7 @@ function sendEmail($name,$recipient,$body)
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
   //Load .env and retrieve sendgrid api key
-  $dotenv = new Dotenv\Dotenv($_SERVER['DOCUMENT_ROOT']);
+  $dotenv = new Dotenv\Dotenv($_SERVER['DOCUMENT_ROOT'] . '/..');
   $dotenv->load();
   $apiKey = getenv('SENDGRID_API_KEY');
 
